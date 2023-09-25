@@ -1,5 +1,14 @@
 # missing-data-bootstrap
 
+## Week 3 Summary
+
+* Set up a simulation with a binomial Z with p = 0.5 and normally distributed X with a mean of Z and SD = 1. Y = 2 X + standard normal error. Z also determinines missingness with the probability that X is missing if Z = 0 of 0.25 and then we varied the probability that X is missing if Z = 1 from 0.05 to 1.
+* Did a simulation examining the bootstrap confidence interval, "true" confidence interval, model based confidence interval and complete case confidence
+* Below is a plot of the results
+    * the bootstrap accurately estimated the true variance
+    * the variability increased as the probability of missingness increased
+    * the model based variance over estimated the truth for lower probabilieis of missingness (~ <0.7) and under-estimated when the probability of missingness was greater
+    * The complete case variance was always smaller than the variance after imputation for all probabilities of missingness 
 ## Week 2 Summary
 
 In the previous meeting, we have worked on creating functions in r for all three different approaches for dealing with missing data while building simple linear regression models. The first approach is the deterministic imputation, which we call that function as run_models. In this scenario, we primarily estimates the missing data by using the z column and leave any non-missing data in x unchanged. The second approach is the bootstrap one, which we extract a proportion of the data set with a fixed number of total rows and allowing repetition of the row, and fit the model to observe the coefficient. The third approach would be the complete case analysis, which we disregard all missing values and only look at what are not missing and fit model with those proportion of data. Another useful thing that I learned from last meeting was the use of "::" symbol since it allows to directly apply certain function from any package without implement the library first.
