@@ -1,5 +1,9 @@
 # missing-data-bootstrap
 
+## Week 2 Summary
+
+In the previous meeting, we have worked on creating functions in r for all three different approaches for dealing with missing data while building simple linear regression models. The first approach is the deterministic imputation, which we call that function as run_models. In this scenario, we primarily estimates the missing data by using the z column and leave any non-missing data in x unchanged. The second approach is the bootstrap one, which we extract a proportion of the data set with a fixed number of total rows and allowing repetition of the row, and fit the model to observe the coefficient. The third approach would be the complete case analysis, which we disregard all missing values and only look at what are not missing and fit model with those proportion of data. Another useful thing that I learned from last meeting was the use of "::" symbol since it allows to directly apply certain function from any package without implement the library first.
+
 ## Week 1 Summary
 
 * Most study only consider the variable being imputed rather than the relationship of y and x with the conditional imputation on x.
