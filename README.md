@@ -1,5 +1,14 @@
 # missing-data-bootstrap
 
+## Week 4 Summary
+
+* adds the Z variable to all the cc, bootstrap, and model cases. 
+* The plot below is what I found out to be. It seemed like that the true variance are pretty aligned with the cc variation and bootstrap variation.
+* However, the model variation overestimates and reveals a quadratic pattern in the plot, which seemed interesting.
+
+  ![Rplot01](https://github.com/wfu-dmds/missing-data-bootstrap/assets/144035061/a055c50f-3510-4e54-987b-23811b90c339)
+
+
 ## Week 3 Summary
 
 * Set up a simulation with a binomial Z with p = 0.5 and normally distributed X with a mean of Z and SD = 1. Y = 2 X + standard normal error. Z also determinines missingness with the probability that X is missing if Z = 0 of 0.25 and then we varied the probability that X is missing if Z = 1 from 0.05 to 1.
