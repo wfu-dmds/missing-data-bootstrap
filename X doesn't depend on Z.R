@@ -70,7 +70,7 @@ library(mice)
 
 df_fnl <- map_df(probability, rep_sim)
 
-plot(df_fnl$prob_f, df_fnl$true_var, col="black",pch="o", ylim = c(0, 0.01), xlab="Probability of missing X with Z = 1", ylab= expression(paste(hat(beta[1]), " variance")), lty=2)
+plot(df_fnl$prob_f, df_fnl$true_var, col="black",pch="o", ylim = c(0, 0.03), xlab="Probability of missing X with Z = 1", ylab= expression(paste(hat(beta[1]), " variance")), lty=2)
 lines(df_fnl$prob_f, df_fnl$true_var,col = "black",lty=2, lwd = 2)
 points(df_fnl$prob_f, df_fnl$estimated_var_det_imp, col="orange", pch="*")
 lines(df_fnl$prob_f, df_fnl$estimated_var_det_imp, col="orange",lty=2, lwd = 2)
@@ -80,5 +80,5 @@ points(df_fnl$prob_f, df_fnl$estimated_boot_var, col="#009E73", pch="+")
 lines(df_fnl$prob_f, df_fnl$estimated_boot_var, col="#009E73",lty=2, lwd = 2)
 points(df_fnl$prob_f, df_fnl$estimated_cc_var, col="#CC79A7", pch="x")
 lines(df_fnl$prob_f, df_fnl$estimated_cc_var, col="#CC79A7",lty=2, lwd = 2)
-legend(0,0.0103,legend=c("True Variance","Deterministic Imputation","Stochastic Imputation","Bootstrap","Complete Case"), col=c("black","orange","skyblue","#009E73","#CC79A7"),
+legend(0,0.03,legend=c("True Variance","Deterministic Imputation","Stochastic Imputation","Bootstrap","Complete Case"), col=c("black","orange","skyblue","#009E73","#CC79A7"),
        pch=c("o","*","#","+","x"), cex = 0.8,lty=c(1,2,3,4,5), ncol=1)
